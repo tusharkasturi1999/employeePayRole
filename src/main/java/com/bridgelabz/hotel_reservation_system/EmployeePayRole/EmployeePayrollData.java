@@ -1,5 +1,5 @@
 package com.bridgelabz.hotel_reservation_system.EmployeePayRole;
-
+ 
 public class EmployeePayrollData {
     private int id;
     private String name;
