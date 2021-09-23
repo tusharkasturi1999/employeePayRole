@@ -58,4 +58,10 @@ public class EmployeePayrollService {
     public long countEntries(IOService ioService) {  
         return new EmployeePayrollFileIOService().countEntries();
     }
+    
+    public void printData()
+    {
+        new EmployeePayrollFileIOService().printData();
+    }
+    
 }
