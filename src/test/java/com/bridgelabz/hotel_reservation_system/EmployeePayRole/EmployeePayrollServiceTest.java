@@ -1,8 +1,8 @@
 package com.bridgelabz.hotel_reservation_system.EmployeePayRole;
-
 import static org.junit.Assert.assertEquals;
 import java.util.*;
 import org.junit.Test;
+
 import com.bridgelabz.hotel_reservation_system.EmployeePayRole.EmployeePayrollService.IOService;
 
 
@@ -20,6 +20,12 @@ public class EmployeePayrollServiceTest {
         long entries=employeePayrollService.countEntries(IOService.FIlE_IO);
         employeePayrollService.printData();
         assertEquals(3,entries);
-    } 
+    }
     
+    @Test
+    public void givenFileOnReadingFromFileShouldMatchEmployeeCount() {
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        long entries=employeePayrollService.readEmployeePayrollData();
+        assertEquals(3,entries);
+    }
 }
